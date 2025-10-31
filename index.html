@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Le conteneur principal qui gère tout -->
+    <div id="container">
+
+        <!-- Arrière-plan Vidéo (caché au début) -->
+        <video id="background-video" preload="auto">
+            <source src="img/Epic_12second_cinematic_202510311949_g69pr.mp4" type="video/mp4">
+            Ton navigateur ne supporte pas la balise vidéo.
+        </video>
+
+        <!-- Arrière-plan avec image fixe (par-dessus la vidéo au début) -->
+        <div id="static-poster" style="background-image: url('poster.jpg');"></div>
+
+        <!-- Overlay Noir (pour l'ambiance) -->
+        <div id="overlay"></div>
+
+        <!-- Conteneur pour le bouton -->
+        <div id="button-container">
+            <button id="enter-button">ENTER</button>
+        </div>
+
+        <!-- Écran de transition noir (pour la fin) -->
+        <div id="fade-to-black-screen"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

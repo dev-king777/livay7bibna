@@ -1,0 +1,127 @@
+/* Style dyal l'page kamla */
+body {
+    background-color: #111;
+    background-image: url('https://wallpapercave.com/wp/wp4992320.jpg' );
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Cairo', sans-serif;
+    opacity: 0;
+    animation: fadeInPage 1.5s forwards;
+}
+@keyframes fadeInPage { to { opacity: 1; } }
+
+/* Conteneur principal */
+.main-container {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Espace bin l'card l'kbira o l'conteneur l'te7tani */
+}
+
+/* L'Card l'kbira l'fouqania */
+.main-card {
+    width: 90%;
+    max-width: 650px;
+}
+
+/* === L'TGHVIR L'ASASSI HNA === */
+/* Conteneur dyal les 2 cards l'te7taniyin */
+.bottom-cards-container {
+    display: flex; /* HADI HIYA L'POINT */
+    justify-content: center; /* Bach yjiw f l'west */
+    align-items: stretch; /* Bach ykouno nafs l'tol */
+    gap: 40px; /* Espace bin les cards */
+    width: 100%;
+    max-width: 1100px; /* 3erd max dyalhom bjouj */
+    flex-wrap: wrap; /* Bach y'rje3o l'ster f les écrans sghar */
+}
+
+/* Style dyal les cards l'sghar */
+.side-card {
+    flex: 1; /* Bach yqsmo l'espace b'tasawi */
+    min-width: 350px; /* 3erd minimal l'kol card */
+    display: flex; /* Bach l'card t'ammar l'espace dyalha */
+}
+
+/* Style commun l'ga3 les cards */
+.birthday-card {
+    width: 100%; /* L'card t'akhod l'3erd kaml dyal l'parent dyalha */
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 2px solid #c9b79c;
+    border-radius: 15px;
+    padding: 25px;
+    color: white;
+    box-shadow: 0 0 30px rgba(255, 223, 186, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.birthday-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px rgba(255, 223, 186, 0.7);
+}
+
+.card-body {
+    flex-grow: 1; /* Kaykhlli had l'parti t'akhod l'espace l'baqi */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.card-title {
+    color: #ffdfba;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.card-text {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    flex-grow: 1; /* Kaykhlli l'paragraphe y'akhod l'espace l'baqi */
+}
+
+/* === L'TGHVIR L'ASASSI HNA === */
+.small-text {
+    font-size: 1.8rem; /* ZEDNA KBRNAH DB */
+    font-weight: bold;
+    line-height: 1.7; 
+}
+
+
+.psg-logo {
+    width: 50px;
+    margin: 15px auto 0 auto; /* Centrer l'logo */
+}
+
+/* Steam Effect (kaybqa nafsso) */
+.steam-effect{position:absolute;top:50%;left:50%;width:300px;height:300px;background:radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);border-radius:50%;transform:translate(-50%, -50%) scale(0);opacity:0;transition:transform 0.6s ease-out, opacity 0.6s ease-out;}.birthday-card:hover .steam-effect{opacity:1;transform:translate(-50%, -50%) scale(2.5);}
+
+/* Animations dyal l'apparition */
+#hakimi-card {
+    opacity: 0;
+    animation: slideInUp 1s 0.8s forwards;
+}
+#draga-card {
+    opacity: 0;
+    animation: slideInUp 1s 1.2s forwards;
+}
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}

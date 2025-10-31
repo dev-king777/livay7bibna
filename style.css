@@ -1,0 +1,61 @@
+/* Reset dyal kolchi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: #000; /* Khalfia khla par défaut */
+}
+
+/* --- STYLES DYAL L'INTRO --- */
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style dyal l'calques (layers) dyal l'intro */
+#background-video, #static-poster, #overlay, #button-container, #fade-to-black-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Trtib dyal l'calques (z-index) - HADA HOWA L'POINT L'MOHIM */
+#background-video       { z-index: 1; object-fit: cover; }
+#static-poster          { z-index: 2; background-size: cover; background-position: center; }
+#overlay                { z-index: 3; background-color: rgba(0, 0, 0, 0.6); }
+#button-container       { z-index: 4; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 10%; }
+#fade-to-black-screen   { z-index: 5; background-color: #000; opacity: 0; pointer-events: none; }
+
+/* Style dyal l'bouton "ENTER" */
+#enter-button {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 15px 40px;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+#enter-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+/* Animation dyal l'ikhtifae */
+.fade-out {
+    transition: opacity 0.5s ease-out;
+    opacity: 0 !important;
+}
